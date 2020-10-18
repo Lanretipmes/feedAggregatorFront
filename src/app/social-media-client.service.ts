@@ -15,4 +15,8 @@ export class SocialMediaClientService {
   getPosts(): Observable<SocialMediaPost[]>{
     return this.http.get<SocialMediaPost[]>(this.apiUrl);
   }
+  addChannel(channelId: string): Observable<object> {
+    const body = {channelId};
+    return this.http.post('http://localhost:8080/addYTchannel', body);
+  }
 }
