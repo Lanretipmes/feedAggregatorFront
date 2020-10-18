@@ -9,11 +9,13 @@ import {Observable} from 'rxjs';
 })
 export class AddYouTubeChannelInputComponent implements OnInit {
   value = '';
+  response: string;
   constructor(private socialMediaClientService: SocialMediaClientService) { }
 
   ngOnInit(): void {
   }
-  addChannel(): Observable<object>{
-    return this.socialMediaClientService.addChannel(this.value);
+
+  addChannel(): void {
+    this.socialMediaClientService.addChannel(this.value).subscribe((response => this.response));
   }
 }
