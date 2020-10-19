@@ -12,7 +12,6 @@ import { SocialMediaPostCardComponent } from './social-media-post-card/social-me
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import { AddYouTubeChannelInputComponent } from './add-you-tube-channel-input/add-you-tube-channel-input.component';
-import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [

@@ -5,6 +5,7 @@
     <mat-card-subtitle>{{post.date}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
+    <a>{{post.title}}</a>
     <div class="images">
       <mat-grid-list cols="4" rowHeight="300px">
         <mat-grid-tile class="tile" *ngFor="let picture of post.pictures">
@@ -16,7 +17,7 @@
   </mat-card-content>
   <div class="buttons">
     <mat-card-actions>
-      <button mat-button>Source Post</button>
+      <button mat-button (click)="srcButtonClick(post.postLink)">Source Post</button>
       <button mat-button>View Full</button>
     </mat-card-actions>
   </div>

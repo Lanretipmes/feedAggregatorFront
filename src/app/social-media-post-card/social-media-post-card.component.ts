@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {SocialMediaClientService} from '../social-media-client.service';
 import {SocialMediaPost} from '../../entity/SocialMediaPost';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-social-media-post-card',
@@ -14,5 +15,8 @@ export class SocialMediaPostCardComponent implements OnInit {
   constructor(private postService: SocialMediaClientService) { }
 
   ngOnInit(): void {
+  }
+  srcButtonClick(sourceLink: string): void {
+    window.location.href = sourceLink;
   }
 }
